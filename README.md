@@ -46,3 +46,30 @@ Then we can download the model and use the docker file to create a container app
 # Sample Request and response
 This process of how to request the API once hosted is shown in the notebook 
 ![demo-notebook](request_response_play.ipynb)
+
+# Local logs during training
+
+```text
+2023-05-06 11:24:29,491, : - file: standardizing.py, 21 - Desired keys to standardize data exist in the constants.yaml
+2023-05-06 11:29:29,963, : - file: standardizing.py, 21 - Desired keys to standardize data exist in the constants.yaml
+2023-05-06 11:32:27,381, WARNING: - file: standardizing.py, 78 - Cant find symbol in master csv for C:\\Users\\transponster\\Documents\\pooja\\data\\nasdaq\stocks\AGM-A.csv, AGM-A
+2023-05-06 11:35:07,065, WARNING: - file: standardizing.py, 78 - Cant find symbol in master csv for C:\\Users\\transponster\\Documents\\pooja\\data\\nasdaq\stocks\CARR#.csv, CARR#
+2023-05-06 12:19:01,894, WARNING: - file: standardizing.py, 78 - Cant find symbol in master csv for C:\\Users\\transponster\\Documents\\pooja\\data\\nasdaq\stocks\UTX#.csv, UTX#
+2023-05-06 12:25:16,495, : - file: standardizing.py, 99 - Completed standardizing and writing to parquet file version 0 in the C:\\Users\\transponster\\Documents\\pooja\\data\\standardized.
+2023-05-06 14:43:21,513, : - file: standardizing.py, 24 - Desired keys to standardize data exist in the constants.yaml
+2023-05-06 14:48:59,721, : - file: standardizing.py, 25 - Desired keys to standardize data exist in the constants.yaml
+2023-05-06 14:49:08,188, WARNING: - file: standardizing.py, 154 - Cant find symbol in master csv for C:\\Users\\transponster\\Documents\\pooja\\data\\nasdaq\stocks\CARR#.csv, CARR#
+2023-05-06 14:49:12,207, WARNING: - file: standardizing.py, 154 - Cant find symbol in master csv for C:\\Users\\transponster\\Documents\\pooja\\data\\nasdaq\stocks\AGM-A.csv, AGM-A
+2023-05-07 11:00:00,127, : - file: dask_rf.py, 79 - Fitting the scalar on the training data !!
+2023-05-07 11:50:22,484, : - file: dask_rf.py, 96 - ----------
+2023-05-07 11:50:23,809, : - file: dask_rf.py, 97 - Training MAE is : 286389.2948
+2023-05-07 11:50:24,024, : - file: dask_rf.py, 98 - Training MSE is : 10130539535362.332
+2023-05-07 11:50:24,422, : - file: dask_rf.py, 99 - Training R2 is : 0.9373
+2023-05-07 11:50:24,422, : - file: dask_rf.py, 100 - ----------
+2023-05-07 12:17:22,690, : - file: dask_rf.py, 134 - Scaling the test data using the scalar !!
+2023-05-07 12:23:39,755, : - file: dask_rf.py, 138 - ----------
+2023-05-07 12:23:40,380, : - file: dask_rf.py, 139 - Test MAE is : 490354.5868
+2023-05-07 12:23:40,430, : - file: dask_rf.py, 140 - Test MSE is : 40829722444872.24
+2023-05-07 12:23:40,543, : - file: dask_rf.py, 141 - Test R2 is : 0.7082
+2023-05-07 12:23:40,543, : - file: dask_rf.py, 142 - ----------
+```
