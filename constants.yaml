@@ -1,0 +1,4 @@
+root-dir: C:\\Users\\transponster\\Documents\\pooja\\data\\nasdaq
+standardized-dir: C:\\Users\\transponster\\Documents\\pooja\\data\\standardized
+processed-dir: C:\\Users\\transponster\\Documents\\pooja\\data\\processed
+model-dir: C:\\Users\\transponster\\Documents\\pooja\\nasdaq_model

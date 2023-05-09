@@ -1,0 +1,18 @@
+FROM python:3.10-slim
+
+RUN apt-get update \
+  && apt-get install -y --no-install-recommends \
+         build-essential \
+  && apt-get autoremove -yqq --purge \
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
+
+WORKDIR "src/"
+COPY requirements.txt requirements.txt
+
+RUN pip3 install --no-cache-dir -r requirements.txt
+
+# Download the trained models
+# trained models are 16 GB in size therefore not completing it otherwise this should work as expected to create a container app
+
+CMD ["uvicorn", "app:predictor_app:app", "--host", "0.0.0.0", "--port", "8081"]
